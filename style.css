@@ -137,6 +137,10 @@ main {
 }
 
 .category-details {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+
 	background-color: var(--clr-dark-blue);
 	border-radius: var(--border-radius);
 
@@ -146,6 +150,20 @@ main {
 
 	position: absolute;
 	bottom: 0;
+}
+
+.category-title {
+	font-size: 1rem;
+}
+
+.category-hours-label {
+	grid-column: span 2;
+}
+
+.category-hours-previous-label {
+	grid-column: span 2;
+	font-size: 0.8rem;
+	color: var(--clr-pale-blue);
 }
 
 /*** Category Background Colors ***/
@@ -178,7 +196,8 @@ main {
 
 .button {
 	display: flex;
-	width: fit-content;
+	max-width: fit-content;
+	min-height: fit-content;
 
 	cursor: pointer;
 
@@ -198,6 +217,29 @@ main {
 
 .button[data-active='false'] {
 	color: var(--clr-desaturated-blue);
+}
+
+button.button.btn-more-options {
+	align-items: center;
+	justify-content: center;
+
+	margin-left: auto;
+	padding-inline: 0.4rem;
+	padding-block: 0.8rem;
+
+	border-radius: var(--border-radius);
+
+	max-width: none;
+	width: 3rem;
+}
+
+/* .btn-img-ellipsis {
+	width: 2rem;
+	height: fit-content;
+} */
+
+.btn-more-options:hover > .btn-img-ellipsis {
+	filter: grayscale(100) brightness(100);
 }
 
 /*** Utilties ***/

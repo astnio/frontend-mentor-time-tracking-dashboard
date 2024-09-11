@@ -17,6 +17,7 @@
 	/* Neutral */
 	--clr-very-dark-blue: hsl(226, 43%, 10%);
 	--clr-dark-blue: hsl(235, 46%, 20%);
+	--clr-dark-blue-hover: #303361;
 	--clr-desaturated-blue: hsl(235, 45%, 61%);
 	--clr-pale-blue: hsl(236, 100%, 87%);
 	--clr-white: rgb(255, 255, 255);
@@ -152,18 +153,30 @@ main {
 	bottom: 0;
 }
 
+.category-details:hover {
+	background-color: var(--clr-dark-blue-hover);
+	cursor: pointer;
+}
+
 .category-title {
 	font-size: 1rem;
 }
 
 .category-hours-label {
 	grid-column: span 2;
+
+	font-size: 3rem;
+	font-weight: 300;
+
+	margin: 0;
 }
 
 .category-hours-previous-label {
 	grid-column: span 2;
 	font-size: 0.8rem;
 	color: var(--clr-pale-blue);
+	margin: 0;
+	margin-bottom: 1.8rem;
 }
 
 /*** Category Background Colors ***/

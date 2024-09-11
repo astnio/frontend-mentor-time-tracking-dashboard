@@ -109,13 +109,9 @@ main {
 /*** Category Card ***/
 
 .cateogry-card {
-	/* display: flex;
-	flex-direction: column;
-	justify-content: end;
-	background-color: var(--clr-soft-orange); */
 	position: relative;
 
-	min-height: 20rem;
+	min-height: 15rem;
 }
 
 .category-background {
@@ -144,7 +140,7 @@ main {
 	background-color: var(--clr-dark-blue);
 	border-radius: var(--border-radius);
 
-	min-height: 85%;
+	min-height: 80%;
 	width: 100%;
 	padding-inline: 1rem;
 

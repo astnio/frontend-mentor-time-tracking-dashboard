@@ -95,7 +95,9 @@ main {
 .user-card-timespan-button-group {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
+
+	gap: 0.6rem;
 
 	height: 100%;
 
@@ -119,8 +121,11 @@ main {
 	background: none;
 
 	color: var(--clr-white);
+	font-size: 1rem;
 
 	border: 0;
+
+	transition: color 0.15s ease-in-out;
 }
 
 .button[data-active='false']:hover {

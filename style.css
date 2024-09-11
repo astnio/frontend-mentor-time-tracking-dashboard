@@ -20,6 +20,8 @@
 	--clr-desaturated-blue: hsl(235, 45%, 61%);
 	--clr-pale-blue: hsl(236, 100%, 87%);
 	--clr-white: rgb(255, 255, 255);
+
+	--border-radius: 20px;
 }
 
 * {
@@ -56,7 +58,7 @@ main {
 .cateogry-card,
 .user-card {
 	background-color: var(--clr-dark-blue);
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	overflow: hidden;
 }
 
@@ -72,7 +74,7 @@ main {
 	background-color: var(--clr-blue);
 	padding-inline: 1rem;
 	min-height: 70%;
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 }
 
 .user-card-image {

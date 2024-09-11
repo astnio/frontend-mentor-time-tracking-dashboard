@@ -6,13 +6,13 @@
 :root {
 	/*** Colors ***/
 	/* Primary */
-	--clr-blue: hsl(246, 80%, 60%);
-	--clr-light-red: hsl(15, 100%, 70%); /* Work */
-	--clr-soft-blue: hsl(195, 74%, 62%); /* Play */
-	--clr-light-red: hsl(348, 100%, 68%); /* Study */
-	--clr-lime-green: hsl(145, 58%, 55%); /* Exercise */
+	--clr-primary: hsl(246, 80%, 60%);
+	--clr-orange: hsl(15, 100%, 70%); /* Work */
+	--clr-blue: hsl(195, 74%, 62%); /* Play */
+	--clr-red: hsl(348, 100%, 68%); /* Study */
+	--clr-green: hsl(145, 58%, 55%); /* Exercise */
 	--clr-violet: hsl(264, 64%, 52%); /* Social */
-	--clr-soft-orange: hsl(43, 84%, 65%); /* Self Care */
+	--clr-yellow: hsl(43, 84%, 65%); /* Self Care */
 
 	/* Neutral */
 	--clr-very-dark-blue: hsl(226, 43%, 10%);
@@ -71,7 +71,7 @@ main {
 }
 
 .user-card-header {
-	background-color: var(--clr-blue);
+	background-color: var(--clr-primary);
 	padding-inline: 1rem;
 	min-height: 70%;
 	border-radius: var(--border-radius);
@@ -119,11 +119,25 @@ main {
 }
 
 .category-background {
-	position: absolute;
+	position: relative;
 	top: 0;
+
+	display: flex;
+	align-items: start;
+	justify-content: end;
+
 	min-height: 50%;
 	width: 100%;
-	background-color: var(--clr-soft-orange);
+}
+
+.category-image {
+	position: relative;
+	top: -0.4rem;
+	right: 1.4rem;
+	filter: grayscale(100%) brightness(0);
+
+	mix-blend-mode: hard-light;
+	opacity: 20%;
 }
 
 .category-details {
@@ -136,6 +150,32 @@ main {
 
 	position: absolute;
 	bottom: 0;
+}
+
+/*** Category Background Colors ***/
+
+.category-bg-orange {
+	background-color: var(--clr-orange);
+}
+
+.category-bg-blue {
+	background-color: var(--clr-blue);
+}
+
+.category-bg-red {
+	background-color: var(--clr-red);
+}
+
+.category-bg-green {
+	background-color: var(--clr-green);
+}
+
+.category-bg-violet {
+	background-color: var(--clr-violet);
+}
+
+.category-bg-yellow {
+	background-color: var(--clr-yellow);
 }
 
 /*** General ***/

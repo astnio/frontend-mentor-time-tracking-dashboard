@@ -33,6 +33,15 @@ img {
 	max-width: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
 body {
 	display: flex;
 	align-items: center;
@@ -259,4 +268,45 @@ button.button.btn-more-options {
 
 .inline-padding {
 	padding-inline: 1rem;
+}
+
+@media screen and (max-width: 1080px) {
+	main {
+		display: flex;
+		flex-direction: column;
+		padding-block: 4rem;
+	}
+
+	.cateogry-card {
+		min-height: 12rem;
+	}
+
+	.category-details {
+		min-height: 70%;
+		padding-block: 1.4rem;
+	}
+
+	.user-card-header {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding-block: 1rem;
+	}
+
+	.user-card-timespan-button-group {
+		flex-direction: row;
+		justify-content: space-between;
+		margin-block: auto;
+		padding-block: 2rem;
+	}
+
+	.category-hours-label {
+		grid-column: span 1;
+	}
+
+	.category-hours-previous-label {
+		grid-column: span 1;
+		margin-bottom: 0;
+		margin-left: auto;
+	}
 }

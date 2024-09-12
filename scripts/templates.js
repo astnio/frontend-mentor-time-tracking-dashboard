@@ -1,5 +1,9 @@
 export class CategoryCard {
-	constructor(categoryName, categoryImage) {
+	constructor(title, timeframes = null, image = null) {
+		this.title = title;
+		this.timeframes = timeframes;
+		this.image = image;
+
 		this.html = /* html */ `
 					<section class="cateogry-card">
 					<picture class="category-background category-bg-orange">

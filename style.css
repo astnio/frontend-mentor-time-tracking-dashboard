@@ -255,11 +255,6 @@ button.button.btn-more-options {
 	width: 3rem;
 }
 
-/* .btn-img-ellipsis {
-	width: 2rem;
-	height: fit-content;
-} */
-
 .btn-more-options:hover > .btn-img-ellipsis {
 	filter: grayscale(100) brightness(100);
 }

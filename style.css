@@ -132,7 +132,8 @@ main {
 	align-items: start;
 	justify-content: end;
 
-	min-height: 50%;
+	/* min-height: 80%; */
+	min-height: 10rem;
 	width: 100%;
 }
 

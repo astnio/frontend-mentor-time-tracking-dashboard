@@ -11,8 +11,6 @@ for (const key in categoryCards) {
 	main.appendChild(obj.htmlElement);
 }
 
-console.log(categoryCards[1].htmlElement);
-
 btnSetCurrentDaily.addEventListener('click', () => {
 	for (const key in categoryCards) {
 		categoryCards[key].setTimeframe('daily');

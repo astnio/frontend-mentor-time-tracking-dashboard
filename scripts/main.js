@@ -17,16 +17,28 @@ btnSetCurrentDaily.addEventListener('click', () => {
 	for (const key in categoryCards) {
 		categoryCards[key].setTimeframe('daily');
 	}
+
+	btnSetCurrentDaily.dataset.active = 'true';
+	btnSetCurrentWeekly.dataset.active = 'false';
+	btnSetCurrentMonthly.dataset.active = 'false';
 });
 
 btnSetCurrentWeekly.addEventListener('click', () => {
 	for (const key in categoryCards) {
 		categoryCards[key].setTimeframe('weekly');
 	}
+
+	btnSetCurrentDaily.dataset.active = 'false';
+	btnSetCurrentWeekly.dataset.active = 'true';
+	btnSetCurrentMonthly.dataset.active = 'false';
 });
 
 btnSetCurrentMonthly.addEventListener('click', () => {
 	for (const key in categoryCards) {
 		categoryCards[key].setTimeframe('monthly');
 	}
+
+	btnSetCurrentDaily.dataset.active = 'false';
+	btnSetCurrentWeekly.dataset.active = 'false';
+	btnSetCurrentMonthly.dataset.active = 'true';
 });

@@ -42,29 +42,18 @@ I decided to change things up in a few different ways for this project.
 
 The first thing I did differently was that I did not use the images completely as they were. I noticed that the images given all had preset colors, based on the background color of its category. I didn't think this was very flexible if the user wanted a new background color or a different image, so I configured images to use a combination of CSS filters so that they instead dark the area of the background they are on. This allows them to be a tint of the background, like their original color, while allowing it to be flexible enough to use any image on any background while keeping it looking good.
 
-### Continued development
+The second thing I did was add more properties to the JSON data. This was mostly so that I could utilize this information for how I setup my JavaScript.
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+For my JavaScript, I wanted to create a system that was expandable. I also tried to keep my code concise by splitting it into 5 main files:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- `fetchData.js` is just to get data from my .json file
+- `categoryCard.js` is a class that helps me model my categoryCard objects
+- `categoryCardsManager.js` reads the data from `fetchData.js` and instantiates a the `categoryCard`s, and puts them into an object that is exported
+- `elementMaker.js` is just used to create an HTML element to append to the main document, however it is used as a property for each `categoryCard`
+- `main.js` is where I setup the buttons and begin appending the card elements to the main page
 
-### Useful resources
+I think the way this is setup is nice, because each categoryCard contains the information for its own element, which is appended to the main page. This makes it easy to change the info on everything at once, as my function for updating info is based on the categoryCard class, which also has its own info from the JSON file it was made from.
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+This means that in my main file, I can just loop over my primary list of time cards, and call their functions to update. This was easy to do as there are only 3 buttons (daily, weekly, monthly) which just changes the hours and labels to match the information already given in the JSON file.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+The design works well too. Since I am using grid, having more than 6 items actually doesn't look too bad, as they simply wrap down to the next row, leaving everything else perfectly fine. Mobile works fine too as it just makes the column longer.

@@ -1,4 +1,4 @@
-const dataPath = '/data.json';
+const dataPath = '/frontend-mentor-time-tracking-dashboard/data.json';
 
 async function loadData(dataLocation) {
 	try {

@@ -4,25 +4,50 @@
 }
 
 :root {
+	color-scheme: dark light;
+
+	--border-radius: 20px;
+
 	/*** Colors ***/
 	/* Primary */
-	--clr-primary: hsl(246, 80%, 60%);
 	--clr-orange: hsl(15, 100%, 70%); /* Work */
 	--clr-blue: hsl(195, 74%, 62%); /* Play */
 	--clr-red: hsl(348, 100%, 68%); /* Study */
 	--clr-green: hsl(145, 58%, 55%); /* Exercise */
 	--clr-violet: hsl(264, 64%, 52%); /* Social */
 	--clr-yellow: hsl(43, 84%, 65%); /* Self Care */
+}
 
-	/* Neutral */
-	--clr-very-dark-blue: hsl(226, 43%, 10%);
-	--clr-dark-blue: hsl(235, 46%, 20%);
-	--clr-dark-blue-hover: #303361;
-	--clr-desaturated-blue: hsl(235, 45%, 61%);
-	--clr-pale-blue: hsl(236, 100%, 87%);
-	--clr-white: rgb(255, 255, 255);
+@media (prefers-color-scheme: dark) {
+	:root {
+		/*** Colors ***/
+		/* Primary */
+		--clr-primary: hsl(246, 80%, 60%);
 
-	--border-radius: 20px;
+		/* Neutral */
+		--clr-very-dark-blue: hsl(226, 43%, 10%);
+		--clr-dark-blue: hsl(235, 46%, 20%);
+		--clr-dark-blue-hover: #303361;
+		--clr-desaturated-blue: hsl(235, 45%, 61%);
+		--clr-pale-blue: hsl(236, 100%, 87%);
+		--clr-white: rgb(255, 255, 255);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		/*** Colors ***/
+		/* Primary */
+		--clr-primary: hsl(246, 100%, 72%);
+
+		/* Neutral */
+		--clr-very-dark-blue: hsl(226, 55%, 83%);
+		--clr-dark-blue: hsl(234, 77%, 95%);
+		--clr-dark-blue-hover: #d2d4ff;
+		--clr-desaturated-blue: hsl(235, 45%, 61%);
+		--clr-pale-blue: hsl(236, 40%, 26%);
+		--clr-white: hsl(229, 20%, 17%);
+	}
 }
 
 * {

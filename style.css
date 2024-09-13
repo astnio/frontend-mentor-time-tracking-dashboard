@@ -127,6 +127,7 @@ main {
 
 .user-card-name {
 	font-weight: 300;
+	font-size: 2.5rem;
 }
 
 .user-card-timespan-button-group {
@@ -305,6 +306,10 @@ button.button.btn-more-options {
 	.category-details {
 		min-height: 70%;
 		padding-block: 1.4rem;
+	}
+
+	.user-card-name {
+		font-size: 1.5rem;
 	}
 
 	.user-card-header {

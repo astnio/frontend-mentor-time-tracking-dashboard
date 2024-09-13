@@ -26,7 +26,7 @@ export class CategoryCard {
 			this.icon,
 			this.color,
 			this.timeframes.weekly.current,
-			'weekly',
+			'Last Week',
 			this.timeframes.weekly.previous
 		);
 	}

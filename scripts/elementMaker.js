@@ -1,9 +1,15 @@
-export function createCategoryCardElement(title, icon, color, timeframes) {
+export function createCategoryCardElement(
+	title,
+	icon,
+	color,
+	timeframes,
+	setTimeFrame = 'weekly'
+) {
 	let previousHoursLabel = '';
 	let previousHours = '';
 	let currentHours = '';
 
-	switch (timeframes) {
+	switch (setTimeFrame) {
 		case 'daily':
 			previousHoursLabel = 'Yesterday';
 			previousHours = timeframes.daily.previous;
@@ -39,12 +45,12 @@ export function createCategoryCardElement(title, icon, color, timeframes) {
 					src="./images/icon-ellipsis.svg"
 					alt="" />
 			</button>
-			<p class="category-hours-label">
-				<span class="category-hours">${currentHours}</span><span>hrs</span>
+			<p class="category-current-hours-label">
+				<span class="current-hours">${currentHours}</span><span>hrs</span>
 			</p>
-			<p class="category-hours-previous-label">
-				<span>${previousHoursLabel} - </span>
-				<span class="category-hours-last-week">${previousHours}</span><span>hrs</span>
+			<p class="category-previous-hours-container">
+				<span class="previous-hours-label">${previousHoursLabel} - </span>
+				<span class="previous-hours">${previousHours}</span><span>hrs</span>
 			</p>
 		</div>
 	`;

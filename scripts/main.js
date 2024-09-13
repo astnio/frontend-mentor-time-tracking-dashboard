@@ -13,8 +13,6 @@ const testCard = createCategoryCardElement(
 	testCat.timeframes
 );
 
-console.log(testCard);
-
 const main = document.querySelector('main');
 
 main.append(testCard);

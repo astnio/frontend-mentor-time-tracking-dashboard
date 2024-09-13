@@ -197,7 +197,7 @@ main {
 	font-size: 1rem;
 }
 
-.category-hours-label {
+.category-current-hours-label {
 	grid-column: span 2;
 
 	font-size: 3rem;
@@ -206,7 +206,7 @@ main {
 	margin: 0;
 }
 
-.category-hours-previous-label {
+.category-previous-hours-container {
 	grid-column: span 2;
 	font-size: 0.8rem;
 	color: var(--clr-pale-blue);
@@ -321,11 +321,11 @@ button.button.btn-more-options {
 		padding-block: 2rem;
 	}
 
-	.category-hours-label {
+	.category-current-hours-label {
 		grid-column: span 1;
 	}
 
-	.category-hours-previous-label {
+	.category-previous-hours-container {
 		grid-column: span 1;
 		margin-bottom: 0;
 		margin-left: auto;

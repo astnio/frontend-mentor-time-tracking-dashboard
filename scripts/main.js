@@ -10,3 +10,23 @@ for (const key in categoryCards) {
 	const obj = categoryCards[key];
 	main.appendChild(obj.htmlElement);
 }
+
+console.log(categoryCards[1].htmlElement);
+
+btnSetCurrentDaily.addEventListener('click', () => {
+	for (const key in categoryCards) {
+		categoryCards[key].setTimeframe('daily');
+	}
+});
+
+btnSetCurrentWeekly.addEventListener('click', () => {
+	for (const key in categoryCards) {
+		categoryCards[key].setTimeframe('weekly');
+	}
+});
+
+btnSetCurrentMonthly.addEventListener('click', () => {
+	for (const key in categoryCards) {
+		categoryCards[key].setTimeframe('monthly');
+	}
+});

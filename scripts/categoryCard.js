@@ -49,9 +49,18 @@ export class CategoryCard {
 				this.currentHours = this.timeframes.monthly.current;
 				break;
 		}
+		this.updateHtml();
 	}
 
 	updateHtml() {
-		// this.htmlElement.querysel
+		const prevHours = this.htmlElement.querySelector('.previous-hours');
+		const prevHoursLabel = this.htmlElement.querySelector(
+			'.previous-hours-label'
+		);
+		const currHours = this.htmlElement.querySelector('.current-hours');
+
+		prevHours.textContent = this.previousHours;
+		prevHoursLabel.textContent = this.previousHoursLabel;
+		currHours.textContent = this.currentHours;
 	}
 }

@@ -37,17 +37,39 @@ data.forEach((element) => {
 console.log(categoryCards);
 console.log(categoryCards[1].timeframes.daily.current);
 
-const html = /* html */ `
+function categoryCardElement(title, icon, color, timeframes) {
+	let previousHoursLabel = '';
+	let previousHours = '';
+	let currentHours = '';
+
+	switch (timeframes) {
+		case 'daily':
+			previousHoursLabel = 'Yesterday';
+			previousHours = timeframes.daily.previous;
+			currentHours = timeframes.daily.current;
+			break;
+		case 'weekly':
+			previousHoursLabel = 'Last Week';
+			previousHours = timeframes.weekly.previous;
+			currentHours = timeframes.weekly.current;
+			break;
+		case 'monthly':
+			previousHoursLabel = 'Last Month';
+			previousHours = timeframes.monthly.previous;
+			currentHours = timeframes.monthly.current;
+			break;
+	}
+
+	return /* html */ `
 	<section class="cateogry-card">
-		<picture class="category-background category-bg-${this.color}">
+		<picture class="category-background category-bg-${color}">
 			<img
 				class="category-image"
-				src="./images/${this.image}.svg"
-				alt=""
-				srcset="" />
+				src="./images/icon-${icon}.svg"
+				alt=""/>
 		</picture>
 		<div class="category-details">
-			<h3 class="category-title">${this.title}</h3>
+			<h3 class="category-title">${title}</h3>
 			<button class="button btn-more-options">
 				<img
 					class="btn-img-ellipsis"
@@ -55,12 +77,13 @@ const html = /* html */ `
 					alt="" />
 			</button>
 			<p class="category-hours-label">
-				<span class="category-hours">00</span><span>hrs</span>
+				<span class="category-hours">${currentHours}</span><span>hrs</span>
 			</p>
 			<p class="category-hours-previous-label">
-				<span>Last week - </span>
-				<span class="category-hours-last-week">00</span><span>hrs</span>
+				<span>${previousHoursLabel} - </span>
+				<span class="category-hours-last-week">${previousHours}</span><span>hrs</span>
 			</p>
 		</div>
 	</section>
 `;
+}

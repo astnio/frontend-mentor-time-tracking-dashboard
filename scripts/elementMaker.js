@@ -2,31 +2,10 @@ export function createCategoryCardElement(
 	title,
 	icon,
 	color,
-	timeframes,
-	setTimeFrame = 'weekly'
+	currentHours,
+	previousHoursLabel,
+	previousHours
 ) {
-	let previousHoursLabel = '';
-	let previousHours = '';
-	let currentHours = '';
-
-	switch (setTimeFrame) {
-		case 'daily':
-			previousHoursLabel = 'Yesterday';
-			previousHours = timeframes.daily.previous;
-			currentHours = timeframes.daily.current;
-			break;
-		case 'weekly':
-			previousHoursLabel = 'Last Week';
-			previousHours = timeframes.weekly.previous;
-			currentHours = timeframes.weekly.current;
-			break;
-		case 'monthly':
-			previousHoursLabel = 'Last Month';
-			previousHours = timeframes.monthly.previous;
-			currentHours = timeframes.monthly.current;
-			break;
-	}
-
 	const categoryCardElement = document.createElement('section');
 	categoryCardElement.classList.add('category-card');
 

@@ -1,21 +1,12 @@
 import { categoryCards } from './categoryCardsManager.js';
-import { createCategoryCardElement } from './elementMaker.js';
-
-// console.log(categoryCards);
-// console.log(categoryCards[1].timeframes.daily.current);
-
-const testCat = categoryCards[1];
-console.log(testCat);
-
-const testCard = createCategoryCardElement(
-	testCat.title,
-	testCat.icon,
-	testCat.color,
-	testCat.timeframes
-);
 
 const main = document.querySelector('main');
 
-main.append(testCard);
+const btnSetCurrentDaily = document.getElementById('btn-set-current-daily');
+const btnSetCurrentWeekly = document.getElementById('btn-set-current-weekly');
+const btnSetCurrentMonthly = document.getElementById('btn-set-current-monthly');
 
-const allCategoryCards = document.querySelectorAll('.category-card');
+for (const key in categoryCards) {
+	const obj = categoryCards[key];
+	main.appendChild(obj.htmlElement);
+}

@@ -8,6 +8,7 @@ data.forEach((element) => {
 		element.id,
 		element.title,
 		element.timeframes,
+		'weekly',
 		element.color,
 		element.icon
 	);

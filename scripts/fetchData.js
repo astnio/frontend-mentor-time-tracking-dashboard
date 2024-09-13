@@ -1,4 +1,5 @@
 const dataPath = '/frontend-mentor-time-tracking-dashboard/data.json';
+// const dataPath = '/data.json';
 
 async function loadData(dataLocation) {
 	try {

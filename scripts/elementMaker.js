@@ -1,4 +1,4 @@
-function categoryCardElement(title, icon, color, timeframes) {
+export function createCategoryCardElement(title, icon, color, timeframes) {
 	let previousHoursLabel = '';
 	let previousHours = '';
 	let currentHours = '';
@@ -21,8 +21,10 @@ function categoryCardElement(title, icon, color, timeframes) {
 			break;
 	}
 
-	return /* html */ `
-	<section class="cateogry-card">
+	const categoryCardElement = document.createElement('section');
+	categoryCardElement.classList.add('category-card');
+
+	categoryCardElement.innerHTML = /* html */ `
 		<picture class="category-background category-bg-${color}">
 			<img
 				class="category-image"
@@ -45,6 +47,7 @@ function categoryCardElement(title, icon, color, timeframes) {
 				<span class="category-hours-last-week">${previousHours}</span><span>hrs</span>
 			</p>
 		</div>
-	</section>
-`;
+	`;
+
+	return categoryCardElement;
 }
